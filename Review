@@ -1,0 +1,87 @@
+Q1 What is the basic syntax of a user defined function?
+A  The basic syntax of a user defined function is:
+
+   function function_name() {
+       Statement(s);
+   }
+
+Q2 What naming rules must your own functions abide by?
+A  The naming rules for functions is the same as the naming rules
+   for variables:
+
+   o The variable name is preceded with a dollar sign
+   o Variable names must begin with either a letter, or underscore
+   o Variable names cannot begin with a number
+   o Rest of the variable name can contain any combination of letters,
+     underscores, and numbers
+   o Variables names cannot contain a space
+   o Each variable name must be unique
+   o Variable names are case-sensitive
+
+   with the following differences:
+
+   1. Function names are not preceded with a dollar sign
+   2. Function names are not case-sensitive
+
+   The names of any user defined functions must be different than those
+   in the standard php set of functions.
+
+Q3 What naming rules must function arguments abide by?
+A  The naming rules for function arguments is the same as the
+   naming rules for php variables.
+
+Q4 How do you provide a default value for a function’s argument?
+A  A default value of a functions argument is specified in the
+   definition of the function.
+
+   For example:
+
+   function runme($arg="Default_Value") {
+       Statement(s);
+   }
+
+Q5 In the example code in the “Understanding Variable Scope” section of
+   the chapter, why does the code use \$n? What would happen if that
+   backslash wasn’t there?
+A  The code precedes the dollar sign with a backslash to escape the
+   dollar sign and cause the print statement to print the sequence
+   "$n".
+
+   If the backslash was not there, the sequence $n would be replaced with
+   the value of the variable named "n".
+
+   For example, given the following statements:
+
+   $n = 1;
+   print "The value of $n is $n";
+   print "The value of \$n is $n";
+
+   the output of the first print statment would be:
+
+   The value of 1 is 1
+
+   while the output of the second print statement would be:
+
+   The value of $n is 1
+
+Q6 What is variable scope? What scope does a function argument variable
+   have?
+A  Variable scope is the realm in which a variable is available. There
+   are two realms of variable scope:
+
+   o local scope - applies to function arguments and variables defined
+     within a function without the "global" keyword
+   o global scope - applies to variables defined outside functions
+
+   A function argument variable has local scope and is only available
+   within the function where it is specified.
+
+Q7 What scope does a variable in an included file have?
+A If the file is included outside of a function, the variable will have
+  global scope.
+
+  If the file file is included inside a function, the variable will behave
+  as though it has been defined inside the function.
+
+  It will have local scope unless it is preceded by the "global" keyword
+  and the variable is defined outside the function.
