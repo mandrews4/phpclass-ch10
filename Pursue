@@ -1,0 +1,18 @@
+P1 Make the function in menus.php take arguments to indicate the starting
+   year and the number of years to generate.
+
+   Make the later argument have a default value. Then rewrite the function
+   body so that it uses these values in the year for loop.
+A  See menus.php
+
+P2 Rewrite the make_text_input() function so that it can be told whether to
+   look for an existing value in either $_POST or $_GET.
+A  See sticky1.php
+
+P3 Create a variation on the make_text_input() function that can create a
+   text input or a password input, depending upon how the function is
+   called.
+A  See sticky2.php
+
+P4 Come up with an idea for, create, and use your own custom function.
+A  See password.php
